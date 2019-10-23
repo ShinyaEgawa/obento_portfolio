@@ -1,0 +1,15 @@
+#branding{
+    display: block;
+    width: 60%;
+    margin-left: 20%;
+    overflow: hidden;
+    background-color: #313131;
+    margin-bottom: 20px;
+    letter-spacing: 10px;
+    line-height: 300px;
+}
+#branding p{
+    color: #fff;
+    font-size: 120%;
+    padding-left: 3%;
+}
