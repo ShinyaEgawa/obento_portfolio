@@ -6,5 +6,6 @@ FactoryBot.define do
     password  {"password"}
     password_confirmation {"password"}
     sequence(:self_introduction) {"ExampleTestIntroduction"}
+    #activated {true}
   end
 end

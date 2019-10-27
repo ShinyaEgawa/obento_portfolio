@@ -1,6 +1,19 @@
+.baner{
+  margin: 10px;
+}
+
 .top-img{
-  width: 250px;
-  height: 250px;
+  width: 150px;
+  height: 150px;
+}
+
+.new-photos{
+  float: left;
+}
+
+.new-title{
+  font-size: 20px;
+  padding-bottom: 10px;
 }
 
 .new-posts-baner{
