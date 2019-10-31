@@ -10,9 +10,13 @@ a:visited{
     -moz-transition: all 0.5s;
     transition: all 0.5s;
 }
-a:hover {
+a:hover:not(#a_invalid) {
     color: white;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     transition: all 0.5s;
+}
+
+#a_invalid{
+  text-decoration: none;
 }

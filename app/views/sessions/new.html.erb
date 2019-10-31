@@ -1,0 +1,14 @@
+<% provide(:title, "ログイン") %>
+<section>
+  <h1 class="login-title">ログインページ</h1>
+  <div class="row">
+    <%= form_for(:session, url: login_path) do |f| %>
+      <%= f.label :メールアドレス, class: "login-section" %>
+      <%= f.email_field :email, placeholder: "メールアドレス", class: "login-field" %>
+      <%= f.label :パスワード, class: "login-section" %>
+      <%= f.password_field :password, placeholder: "パスワード" ,class: "login-field" %>
+      <div class="login-btn"><%= f.submit "ログイン", class: "btn" %></div>
+      <% end %>
+      <p>新規登録が済んでいませんか？<span class="new-registration"><%= link_to "新規登録はこちら", signup_path, class: "new-registration", id: "a_invalid" %></span></p>
+  </div>
+</section>

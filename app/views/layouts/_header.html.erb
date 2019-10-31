@@ -1,16 +1,23 @@
 <header id="header">
   <div id="main-title">
-    <p class="header-title">みんおべ！</p>
+    <p class="header-title"><%= link_to "みんおべ！", root_path, id: "a_invalid" %></p>
     <div class="header-subtitle">
       <p>作ったお弁当を共有するサイト</p>
     </div>
   </div>
   <nav>
     <ul class="header-list">
-      <li><%= link_to "ホーム", root_path %></li>
-      <li><%= link_to "利用規約", service_path %></li>
-      <li><a href="#">投稿一覧</a></li>
-      <li><%= link_to "新規登録", signup_path %></li>
+      <% if logged_in? %>
+        <li><%= link_to "ホーム", root_path %></li>
+        <li><%= link_to "ユーザー", current_user %></li>
+        <li><a href="#">投稿一覧</a></li>
+        <li><%= link_to "ログアウト", logout_path, method: :delete %></li>
+      <% else %>
+        <li><%= link_to "ホーム", root_path %></li>
+        <li><%= link_to "利用規約", service_path %></li>
+        <li><a href="#">投稿一覧</a></li>
+        <li><%= link_to "ログイン", login_path %></li>
+      <% end %>
     </ul>
   </nav>
 </header>

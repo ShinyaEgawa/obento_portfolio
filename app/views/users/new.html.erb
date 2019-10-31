@@ -1,30 +1,22 @@
 <% provide(:title, "新規登録") %>
 <section>
-  <h1>Sign up</h1>
+  <h1 class="signin-title">新規登録</h1>
   <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-      <%= form_for(@user) do |f| %>
-      <%= render 'shared/error_messages' %>
-        <%= f.label :名前 %>
-        <%= f.text_field :name %>
-
-        <%= f.label :ニックネーム %>
-        <%= f.text_field :nickname %>
-
-        <%= f.label :メールアドレス %>
-        <%= f.email_field :email %>
-
-        <%= f.label :自己紹介 %>
-        <%= f.text_field :self_introduction %>
-
-        <%= f.label :パスワード %>
-        <%= f.password_field :password %>
-
-        <%= f.label :password_confirmation, "パスワード(再確認)" %>
-        <%= f.password_field :password_confirmation %>
-
-        <%= f.submit "新規登録を行う", class: "btn btn-primary" %>
-      <% end %>
-    </div>
+    <%= form_for(@user) do |f| %>
+    <%= render 'shared/error_messages' %>
+      <%= f.label :名前, class: "signin-section" %>
+      <%= f.text_field :name, placeholder: "名前" %>
+      <%= f.label :ニックネーム, class: "signin-section" %>
+      <%= f.text_field :nickname, placeholder: "ニックネーム" %>
+      <%= f.label :メールアドレス, class: "signin-section" %>
+      <%= f.email_field :email, placeholder: "メールアドレス" %>
+      <%= f.label :自己紹介, class: "signin-section" %>
+      <%= f.text_field :self_introduction, placeholder: "自己紹介" %>
+      <%= f.label :パスワード, class: "signin-section" %>
+      <%= f.password_field :password, placeholder: "パスワード" %>
+      <%= f.label :password_confirmation, "パスワード(再確認)", class: "signin-section" %>
+      <%= f.password_field :password_confirmation, placeholder: "パスワードの再確認" %>
+      <div class="signin-btn"><%= f.submit "新規登録を行う", class: "btn btn-primary" %></div>
+    <% end %>
   </div>
 </section>

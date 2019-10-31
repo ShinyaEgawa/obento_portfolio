@@ -10,3 +10,5 @@
 /* 各ページごとのcss */
 @import "top_pages.css";
 @import "users.css";
+@import "service.css";
+@import "sessions.css";
