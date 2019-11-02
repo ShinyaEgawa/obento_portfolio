@@ -11,7 +11,6 @@ RSpec.describe "User pages", type: :request do
     end
   end
 
-=begin
   describe 'GET #show' do
     context 'ログイン済みのユーザーの場合' do
       it '正常なレスポンスを返すこと' do
@@ -21,7 +20,14 @@ RSpec.describe "User pages", type: :request do
         expect(response).to have_http_status "200"
       end
     end
-  end
-=end
 
+=begin
+    context 'ログインしていないユーザーの場合' do
+      it 'ログイン画面に移行すること' do
+        get user_path(user)
+        expect(response).to redirect_to login_path
+      end
+    end
+=end
+  end
 end

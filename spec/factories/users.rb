@@ -1,11 +1,12 @@
 FactoryBot.define do
   factory :user do
-    sequence(:name) {|n| "User#{n}"}
-    sequence(:nickname) {|n| "NickName#{n}"}
+    name "Example"
+    nickname "NicknameExample"
     sequence(:email) {|n| "tester#{n}@example.com"}
-    password  {"password"}
-    password_confirmation {"password"}
-    sequence(:self_introduction) {"ExampleTestIntroduction"}
-    #activated {true}
+    password "password"
+    password_confirmation "password"
+    self_introduction "ExampleTestIntroduction"
+    # 有効化
+    #activated true
   end
 end
