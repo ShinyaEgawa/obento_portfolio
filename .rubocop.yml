@@ -52,6 +52,11 @@ Style/MultilineTernaryOperator:
 GuardClause:
   MinBodyLength: 4
 
+# "Block has too many lines."を無効
+# spec等の定義部では日本語を使用することが多く文字数が伸びてしまう為
+Metrics/BlockLength:
+  Enabled: false
+
 ########################
 # 以下本番環境では無効状態を削除する恐れのある者たち
 ########################

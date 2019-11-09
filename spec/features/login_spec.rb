@@ -9,9 +9,7 @@ RSpec.feature "Login", type: :feature do
 
   scenario 'ログイン・ログアウトが成功すること' do
     # ログインのテスト
-    fill_in('session[email]', with: user.email)
-    fill_in('session[password]', with: user.password)
-    click_button 'ログイン'
+    valid_login(user)
     expect(current_path).to eq user_path(user)
     expect(page).to_not have_link 'ログイン'
     # ログアウトのテスト
