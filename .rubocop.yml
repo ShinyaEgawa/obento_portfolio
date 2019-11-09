@@ -1,0 +1,67 @@
+AllCops:
+  Exclude:
+    - 'db/**/*'
+    - 'bin/*'
+    - 'config.ru'
+    - 'Rakefile'
+    - 'config/environments/*'
+    - 'config/application.rb'
+    - 'config/initializers/*'
+    - 'config/spring.rb'
+    - 'lib/tasks/*'
+    - 'vendor/**/*'
+    - 'path/ruby'
+    - 'Gemfile'
+    - 'spec/spec_helper.rb'
+
+Rails:
+ Enabled: true
+
+# "Use only ascii symbols in comments"を無効.
+AsciiComments:
+ Enabled: false
+
+# "Missing top-level class documentation comment."を無効
+Style/Documentation:
+  Enabled: false
+
+# "Prefer single-quoted strings when you don't need string interpolation or special symbols."を無効
+Style/StringLiterals:
+  Enabled: false
+
+# "Line is too long"を無効
+Metrics/LineLength:
+  Enabled: false
+
+# "Missing magic comment # frozen_string_literal: true."を無効
+# '# frozen_string_literal: true' のマジックコメント対策として使用
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+# "Avoid using update_attribute because it skips validations."を無効
+# モデルに対するupdateを行う際、バリデーションをスキップさせたい為
+Rails/SkipsModelValidations:
+  Enabled: false
+
+# "Avoid multi-line ternary operators, use if or unless instead."を無効
+Style/MultilineTernaryOperator:
+  Enabled: false
+
+# "Use a guard clause instead of wrapping the code inside a conditional expression."を無効
+# ガード節の使用数を 1 -> 4 へ変更
+GuardClause:
+  MinBodyLength: 4
+
+########################
+# 以下本番環境では無効状態を削除する恐れのある者たち
+########################
+
+# "Put empty method definitions on a single line."を無効
+# 開発環境下で現状作成していないところまで指摘を食らっている為、無効化
+Style/EmptyMethod:
+  Enabled: false
+
+# "Extra empty line detected at block body beginning."を無効
+# 開発環境下で現状作成していないところまで指摘を食らっている為、無効化
+Layout/EmptyLinesAroundBlockBody:
+  Enabled: false

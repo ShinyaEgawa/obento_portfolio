@@ -1,0 +1,10 @@
+<li>
+  <%= link_to user, id: "a_invalid" do %>
+    <%= gravatar_for user, size:50 %>
+    <%= user.nickname %>
+  <% end %>
+  <% if current_user.admin? && !current_user?(user) %>
+    | <%= link_to "ユーザーの削除", user, method: :delete, id: "a_invalid",
+                                  data: { confirm: "このユーザーを削除しますか?" } %>
+  <% end %>
+</li>

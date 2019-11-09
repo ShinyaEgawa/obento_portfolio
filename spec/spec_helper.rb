@@ -96,4 +96,6 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
+  Capybara.default_driver = :rack_test
+  Capybara.javascript_driver = :selenium
 end
