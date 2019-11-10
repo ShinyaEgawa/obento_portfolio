@@ -16,6 +16,8 @@ RSpec.feature "SignUps", type: :feature do
         fill_in 'user[password_confirmation]', with: 'foobar'
         click_button '新規登録を行う'
       }.to change(User, :count).by(1)
+      expect(page).to have_content 'アカウント有効化メールをお送りしました！'
+      expect(current_path).to eq root_path
     end
   end
 end

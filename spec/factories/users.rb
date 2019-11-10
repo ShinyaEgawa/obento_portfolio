@@ -6,5 +6,6 @@ FactoryBot.define do
     password "password"
     password_confirmation "password"
     self_introduction "ExampleTestIntroduction"
+    activated true
   end
 end
