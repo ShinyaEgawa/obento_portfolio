@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root 'top_pages#home'
-  get 'sessions/new', to: 'sessions#new'
+  # get 'sessions/new', to: 'sessions#new'
   get '/about', to: 'top_pages#about'
   get '/service', to: 'top_pages#service'
   get '/signup', to: 'users#new'
@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
 
   resources :users
-  resources :account_activations, only: [:edit]
+  resources :account_activations, only: %i[edit]
+  resources :password_resets, only: %i[new create edit]
 end
