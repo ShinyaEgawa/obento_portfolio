@@ -1,6 +1,8 @@
 /* 常用css */
+/*
 @import "bootstrap-sprockets";
 @import "bootstrap";
+*/
 @import "default.css";
 @import "header.css";
 @import "footer.css";

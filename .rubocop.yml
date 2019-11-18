@@ -57,6 +57,11 @@ GuardClause:
 Metrics/BlockLength:
   Enabled: false
 
+# "Indent access modifiers like private."を無効
+# 今回は[def]と[private def]が同じインデントにあることがtrueと考えるため、無効化
+Layout/AccessModifierIndentation:
+  Enabled: false
+
 ########################
 # 以下本番環境では無効状態を削除する恐れのある者たち
 ########################
