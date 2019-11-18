@@ -1,20 +1,23 @@
 <% provide(:title, "Home") %>
 <section>
+<% if logged_in? %>
   <div class="baner">
-    <h1 class="new-posts-baner">みんなのお弁当新着情報</h1>
+    <h1 class="new-posts-baner"><%= current_user.nickname %>さんのお弁当新着情報</h1>
   </div>
-  <div class="new-photos">
-    <%= image_tag("photo1.jpeg", :alt => "photo1.jpeg", class: "top-img") %>
-    <h1 class="posts-title"></h1>
-    <p class="posts-description"></p>
-  </div>
-  <div class="new-text">
-    <h1 class="new-title">テストお弁当</h1>
-    <div class="create-date">投稿:2019年1月1日</div>
-    <div class="new-description">
-      テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-      テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-      テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+  <div class="col-md-8">
+      <%= render 'shared/feed' %>
     </div>
-  </div>
+</section>
+<section>
+    <h1 class="h1" style="font-size: 30px;">投稿してみましょう！</h1>
+      <div class="row">
+        <aside class="col-md-4">
+          <div class="micropost_form">
+            <%= render 'shared/micropost_form' %>
+          </div>
+        </aside>
+      </div>
+      <% else %>
+      <h1>一緒にお弁当を共有してみませんか？</h1>
+  <% end %>
 </section>

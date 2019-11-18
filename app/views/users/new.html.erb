@@ -3,7 +3,7 @@
   <h1 class="signin-title">新規登録</h1>
   <div class="row">
     <%= form_for(@user) do |f| %>
-    <%= render 'shared/error_messages' %>
+     <%= render 'shared/error_messages', object: f.object %>
       <%= f.label :名前, class: "signin-section" %>
       <%= f.text_field :name, placeholder: "名前" %>
       <%= f.label :ニックネーム, class: "signin-section" %>

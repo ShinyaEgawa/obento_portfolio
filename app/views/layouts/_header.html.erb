@@ -9,15 +9,12 @@
     <ul class="header-list">
       <% if logged_in? %>
         <li><%= link_to "ホーム", root_path %></li>
-        <li><%= link_to "ユーザー", current_user %></li>
-        <li><%= link_to "ユーザー一覧", users_path %></li>
+        <li><%= link_to "マイページ", current_user %></li>
         <li><%= link_to "更新", edit_user_path(current_user) %></li>
-        <li><a href="#">投稿一覧</a></li>
         <li><%= link_to "ログアウト", logout_path, method: :delete %></li>
       <% else %>
         <li><%= link_to "ホーム", root_path %></li>
         <li><%= link_to "利用規約", service_path %></li>
-        <li><a href="#">投稿一覧</a></li>
         <li><%= link_to "新規登録", signup_path %></li>
         <li><%= link_to "ログイン", login_path %></li>
       <% end %>
