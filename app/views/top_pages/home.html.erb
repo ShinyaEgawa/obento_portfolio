@@ -2,7 +2,7 @@
 <section>
 <% if logged_in? %>
   <div class="baner">
-    <h1 class="new-posts-baner"><%= current_user.nickname %>さんのお弁当新着情報</h1>
+    <h1 class="new-posts-baner">みんなのお弁当新着</h1>
   </div>
   <div class="col-md-8">
       <%= render 'shared/feed' %>
