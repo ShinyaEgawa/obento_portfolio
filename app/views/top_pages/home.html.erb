@@ -1,23 +1,27 @@
 <% provide(:title, "Home") %>
 <section>
-<% if logged_in? %>
+  <% if logged_in? %>
   <div class="baner">
     <h1 class="new-posts-baner">みんなのお弁当新着</h1>
   </div>
   <div class="col-md-8">
-      <%= render 'shared/feed' %>
-    </div>
+    <%= render 'shared/feed' %>
+  </div>
 </section>
 <section>
-    <h1 class="h1" style="font-size: 30px;">投稿してみましょう！</h1>
-      <div class="row">
-        <aside class="col-md-4">
-          <div class="micropost_form">
-            <%= render 'shared/micropost_form' %>
-          </div>
-        </aside>
-      </div>
-      <% else %>
-      <h1>一緒にお弁当を共有してみませんか？</h1>
+  <h1 class="h1" style="font-size: 30px;">投稿してみましょう！</h1>
+    <div class="row">
+      <aside class="col-md-4">
+        <div class="micropost_form">
+          <%= render 'shared/micropost_form' %>
+        </div>
+      </aside>
+    </div>
+  <% else %>
+    <div class="before-toppage">
+      <%= image_tag("photo1.jpeg", :alt => "photo1.jpeg") %>
+      <h1 class="title">一緒にお弁当を共有してみませんか？</h1>
+      <%= link_to "新規登録", signup_path, id: "a_invalid", class: "signup-link" %>
+    </div>
   <% end %>
 </section>
