@@ -1,22 +1,25 @@
 <% provide(:title, @user.name) %>
 <section>
-    <div class="user-img">
-      <%= gravatar_for @user %>
-    </div>
-    <h1 class="user-name">
-      <%= @user.nickname %>
-    </h1>
-    <%= @user.email %>
-    <%= @user.self_introduction %>
-  <div class="col-md-8">
-    <% if @user.microposts.any? %>
-      <h3>投稿数 (<%= @user.microposts.count %>)</h3>
-          <%= render 'shared/stats' %>
-          <%= render 'follow_form' if logged_in? %>
+  <div class="user-img">
+    <%= gravatar_for @user %>
+  </div>
+  <h1 style="font-size:30px;">
+    <%= @user.nickname %>
+  </h1>
+  <p style="font-size:15px;">
+  <%= @user.self_introduction %>
+  </p>
+  <h2 style="font-size:18px;">
+  <% if @user.microposts.any? %>
+    投稿数 (<%= @user.microposts.count %>)
+    <%= render 'shared/stats' %>
+    <%= render 'follow_form' if logged_in? %>
+  </h2>
+</section>
       <ol class="microposts">
         <%= render @microposts %>
       </ol>
     <% end %>
-  </div>
+    <section>
 <%= will_paginate @microposts %>
 </section>
