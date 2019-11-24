@@ -9,7 +9,7 @@ module LoginSupport
   def go_user_edit
     valid_login(user)
     visit user_path(user)
-    click_link '更新'
+    click_link '編集'
   end
 end
 

@@ -10,14 +10,17 @@
         <ul>
           <li><%= link_to "ホーム", root_path %></li>
           <li><%= link_to "マイページ", current_user %></li>
-          <li><%= link_to "更新", edit_user_path(current_user) %></li>
+          <li><%= link_to "ユーザー", users_path %></li>
+          <li><%= link_to "編集", edit_user_path(current_user) %></li>
           <li><%= link_to "ログアウト", logout_path, method: :delete %></li>
         </ul>
       <% else %>
         <ul>
           <li><%= link_to "ホーム", root_path %></li>
           <li><%= link_to "利用規約", service_path %></li>
+          <li><%= link_to "みんおべとは", about_path %></li>
           <li><%= link_to "ログイン", login_path %></li>
+          <li><%= link_to "新規登録", signup_path %></li>
         </ul>
       <% end %>
     </nav>

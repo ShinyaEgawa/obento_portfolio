@@ -4,18 +4,16 @@
   <div class="baner">
     <h1 class="new-posts-baner">みんなのお弁当新着</h1>
   </div>
-  <div class="col-md-8">
     <%= render 'shared/feed' %>
-  </div>
 </section>
 <section>
-  <h1 class="h1" style="font-size: 30px;">投稿してみましょう！</h1>
+  <div class="baner">
+    <h1 class="new-posts-baner">投稿フォーム</h1>
+  </div>
     <div class="row">
-      <aside class="col-md-4">
         <div class="micropost_form">
           <%= render 'shared/micropost_form' %>
         </div>
-      </aside>
     </div>
   <% else %>
     <div class="before-toppage">

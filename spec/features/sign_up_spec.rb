@@ -4,8 +4,7 @@ RSpec.feature "SignUps", type: :feature do
   include ActiveJob::TestHelper
 
   scenario '新規登録に成功すること' do
-    visit root_path
-    click_link '新規登録'
+    visit signup_path
     perform_enqueued_jobs do
       expect { # rubocop:disable Style/BlockDelimiters
         fill_in 'user[name]', with: 'ExampleUser'
