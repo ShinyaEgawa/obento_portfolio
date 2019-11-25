@@ -1,25 +1,33 @@
 <% provide(:title, "Home") %>
 <section>
-  <% if logged_in? %>
+<% if logged_in? %>
+  <%= form_tag(root_path, method: :get) do %>
+    <div class="input-group">
+      <%= search_field_tag "q", params[:q], class: "form-control", placeholder: "キーワード検索※部分一致可(ニックネーム、または投稿内容)" %>
+      <span class="input-group-btn">
+        <%= submit_tag "検索", class: "btn btn-default", style: "margin-left:10%;" %>
+      </span>
+    </div>
+  <% end %>
   <div class="baner">
     <h1 class="new-posts-baner">みんなのお弁当新着</h1>
   </div>
-    <%= render 'shared/feed' %>
+  <%= render 'shared/feed' %>
 </section>
 <section>
   <div class="baner">
     <h1 class="new-posts-baner">投稿フォーム</h1>
   </div>
-    <div class="row">
-        <div class="micropost_form">
-          <%= render 'shared/micropost_form' %>
-        </div>
+  <div class="row">
+    <div class="micropost_form" id="post">
+      <%= render 'shared/micropost_form' %>
     </div>
-  <% else %>
-    <div class="before-toppage">
-      <%= image_tag("photo1.jpeg", :alt => "photo1.jpeg") %>
-      <h1 class="title">一緒にお弁当を共有してみませんか？</h1>
+  </div>
+<% else %>
+  <div class="before-toppage">
+    <%= image_tag("photo1.jpeg", :alt => "photo1.jpeg") %>
+    <h1 class="title">一緒にお弁当を共有してみませんか？</h1>
       <%= link_to "新規登録", signup_path, id: "a_invalid", class: "signup-link" %>
-    </div>
-  <% end %>
+  </div>
+<% end %>
 </section>

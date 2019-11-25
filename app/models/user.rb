@@ -20,6 +20,9 @@ class User < ApplicationRecord
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
   has_secure_password
   validates :self_introduction, presence: true, length: { maximum: 500 }
+  scope :search_by_keyword, -> (keyword) {
+    where("users.nickname LIKE :keyword", keyword: "%#{sanitize_sql_like(keyword)}%") if keyword.present?
+  }
 
   # 渡された文字列のハッシュ値を返す
   def self.digest(string)

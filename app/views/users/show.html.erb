@@ -7,19 +7,20 @@
     <%= @user.nickname %>
   </h1>
   <p style="font-size:15px;">
-  <%= @user.self_introduction %>
+    <%= @user.self_introduction %>
   </p>
+  <%= link_to "ユーザーの情報を編集する", edit_user_path(current_user) %>
   <h2 style="font-size:18px;">
-  <% if @user.microposts.any? %>
-    投稿数 (<%= @user.microposts.count %>)
-    <%= render 'shared/stats' %>
-    <%= render 'follow_form' if logged_in? %>
+    <% if @user.microposts.any? %>
+      投稿数 (<%= @user.microposts.count %>)
+      <%= render 'shared/stats' %>
+      <%= render 'follow_form' if logged_in? %>
   </h2>
 </section>
-      <ol class="microposts">
-        <%= render @microposts %>
-      </ol>
+  <ol class="microposts">
+    <%= render @microposts %>
+  </ol>
     <% end %>
-    <section>
+<section>
 <%= will_paginate @microposts %>
 </section>
