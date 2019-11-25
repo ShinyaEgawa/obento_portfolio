@@ -11,23 +11,63 @@
     <p>
       なぜ、このサイトを作ったのかなのですが、中学高校とお昼ご飯は毎日母が作ってくれたお弁当でした。<br />
       どのような忙しい時でも作ってくれた事に感謝はしているのですが、日々のお弁当の努力は誰にも分からないのでは無いかと思いました。<br />
-      そこで、その時に考えたのは、サイトを立ち上げてそこにお弁当の出来栄えや努力したことを報告できたらいいのでは無いかと思いこのサイトを作成しました。
+      そこで、その時に考えたのは、サイトを立ち上げてそこにお弁当の出来栄えや努力したことを報告できたらいいのでは無いかと思いこのサイトを作成致しました。
     </p>
+    <h1>導入</h1>
+    <p>どのような導入を行ったのかを以下にまとめました</p>
+    <article class="Introduction">
+      <h1>Docker</h1>
+      <p>
+        今回のポートフォリオでは現在、主流になっているDockerを使用し、Railsを構築しています。<br />
+        ポートフォリオで初めてDockerを使用しましたが、公式文章やQiitaなどを閲覧していくうちに、<br />
+        Dockerの利点や仮想マシンとの大きな違いなど理解することができました。<br />
+        私のQiitaで導入手順などを議事録として書かせていただきました為、一度ご確認の程よろしくお願いします。<br />
+        <br />
+        <a href="https://qiita.com/pooooon/items/547a9cb4cd2a6f291468" id="a_invalid" class="btn">
+          Railsでポートフォリオを作ってみよう！ vol.1 前編 (Docker導入編)
+        </a>
+      </p>
+      <h1>Docker-compose</h1>
+      <p>
+        こちらもDockerと併用して実装を行いました。<br />
+        Dockerfileやdocker-compose.ymlを一から作成させて頂きました。<br />
+        docker-composeでのエラーは少なかったのですが、DBでのエラーが非常に多く、<br />
+        特に[OCI runtime create failed error]には原因と解決策が数多くあり、<br />
+        私自身に起こったエラーと似ている解決策を探すのに一苦労した記憶があります。<br />
+        こちらもQiitaで導入手順を議事録として書かせていただきました。<br />
+        <a href="https://qiita.com/pooooon/items/9f792dc7a99e5623522c" id="a_invalid" class="btn" style="margin-left:10%;">
+          Railsでポートフォリオを作ってみよう！ vol.1 後編 (docker-compose導入〜rails構築編)
+        </a>
+      </p>
+      <h1>Circle ci</h1>
+      <p>
+        最近Dockerと並んで流行っているCircle ciも導入しようと試みています<br />
+        現在絶賛実装中です。
+      </p>
+    </article>
     <h1>機能の実装</h1>
-    <p>どのような機能の実装を行ったのかを以下にまとめてみました</p>
-    <article class="list">
-    <h1>a</h1>
-    <p>b</p>
-    <h1>a</h1>
-    <p>b</p>
-    <h1>a</h1>
-    <p>b</p>
-    <h1>a</h1>
-    <p>b</p>
-    <h1>a</h1>
-    <p>b</p>
-    <h1>a</h1>
-    <p>b</p>
+    <p>
+      どのような機能の実装を行ったのかを以下にまとめました。<br />
+      ちなみに、今回はBootstrapの力を使用せずにViewを作成しました。<br />
+      cssファイルがとても見にくくなっております。申し訳ありません。
+    </p>
+    <article class="Feature-implementation">
+      <h1>ユーザーのログイン・ログアウト機能</h1>
+      <p>RailsTutorial、第6章〜第8章を参照に実装を行いました。</p>
+      <h1>ユーザーの更新・編集機能</h1>
+      <p>RailsTutorial、第10章を参照に実装を行いました。</p>
+      <h1>メールでのアカウント有効化</h1>
+      <p>RailsTutorial、第11章を参照に実装を行いました。</p>
+      <h1>パスワードを忘れた際の再設定</h1>
+      <p>RailsTutorial、第12章を参照に実装を行いました。</p>
+      <h1>投稿機能</h1>
+      <p>RailsTutorial、第13章を参照に実装を行いました。</p>
+      <h1>ユーザーフォロー機能</h1>
+      <p>RailsTutorial、第14章を参照に実装を行いました。</p>
+      <h1>いいね！機能</h1>
+      <p>自身で実装を行いました。</p>
+      <h1>ユーザー・投稿の検索機能</h1>
+      <p>自身で実装を行いました。</p>
     </article>
   </article>
 </section>

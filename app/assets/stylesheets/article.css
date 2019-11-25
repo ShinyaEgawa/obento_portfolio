@@ -40,9 +40,9 @@ article p{
     float: left;
 }
 article .btn{
-    color: #fff;
+    color: orange;
     border: 1px solid orange;
-    background-color: orange;
+    background-color: #fff;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 30px;
@@ -54,11 +54,11 @@ article .btn{
     float: right;
 }
 article .btn:hover{
-    background-color: #fff;
+    background-color: orange;
     border: 1px solid orange;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     transition: all 0.5s;
-    color: orange;
+    color: #fff;
     overflow: hidden;
 }
