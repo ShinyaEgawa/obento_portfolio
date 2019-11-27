@@ -25,4 +25,11 @@ class SessionsController < ApplicationController
     log_out if logged_in?
     redirect_to root_url
   end
+
+  def guest_login
+    user = User.find(1)
+    log_in(user)
+    flash[:success] = 'ゲストユーザーでログインを行っております'
+    redirect_to root_url
+  end
 end

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/service', to: 'top_pages#service'
   get '/signup', to: 'users#new'
   get '/login', to: 'sessions#new'
+  get '/login_as_guest', to: 'sessions#guest_login'
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
   resources :users do
