@@ -17,6 +17,7 @@
       投稿数 (<%= @user.microposts.count %>)
       <%= render 'shared/stats' %>
   </h2>
+  <%= render 'follow_form' if logged_in? %>
 </section>
   <ol class="microposts">
     <%= render @microposts %>
