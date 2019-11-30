@@ -10,13 +10,12 @@
     <%= @user.self_introduction %>
   </p>
   <% if current_user == @user %>
-    <%= link_to "ユーザーの情報を編集する", edit_user_path(current_user) %>
+    <%= link_to "ユーザーの情報を編集する", edit_user_path(current_user), id: "a_invalid", style: "border-bottom: 1px solid #12938B" %>
   <% end %>
   <h2 style="font-size:18px;">
     <% if @user.microposts.any? %>
       投稿数 (<%= @user.microposts.count %>)
       <%= render 'shared/stats' %>
-      <%= render 'follow_form' if logged_in? %>
   </h2>
 </section>
   <ol class="microposts">

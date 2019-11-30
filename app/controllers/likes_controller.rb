@@ -1,12 +1,13 @@
 class LikesController < ApplicationController
   before_action :logged_in_user
 
+  # rubocop:disable all
   def create
     @micropost = Micropost.find(params[:micropost_id])
     unless @micropost.like?(current_user)
       @micropost.like(current_user)
       respond_to do |format|
-        format.html { redirect_to request.referrer || root_url }
+        format.html { redirect_to request.referer || root_url }
         format.js
       end
     end
@@ -17,9 +18,10 @@ class LikesController < ApplicationController
     if @micropost.like?(current_user)
       @micropost.unlike(current_user)
       respond_to do |format|
-        format.html { redirect_to request.referrer || root_url }
+        format.html { redirect_to request.referer || root_url }
         format.js
       end
     end
   end
+  # rubocop:enable all
 end

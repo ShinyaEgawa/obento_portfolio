@@ -8,14 +8,21 @@ class MicropostsController < ApplicationController
       flash[:success] = '投稿しました!'
       redirect_to root_path
     else
+      @feed_items = []
       render 'top_pages/home'
     end
+  end
+
+  def show
+    @micropost = Micropost.find(params[:id])
+    @comment = Comment.new
+    @user = User.find_by(id: @micropost.user_id)
   end
 
   def destroy
     @micropost.destroy
     flash[:success] = '投稿の削除に成功しました'
-    redirect_to request.referrer || user_path(current_user)
+    redirect_to request.referer || user_path(current_user)
   end
 
 private

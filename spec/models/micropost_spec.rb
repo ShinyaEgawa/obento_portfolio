@@ -22,7 +22,7 @@ RSpec.describe Micropost, type: :model do
       expect(micropost).to_not be_valid
     end
 
-    it ':micropostのcontentが140文字を超えたら無効になること' do
+    it ':micropostのcontentが300文字を超えたら無効になること' do
       FactoryBot.create(:micropost)
       micropost = FactoryBot.build(:micropost, content: "a" * 301)
       micropost.valid?
