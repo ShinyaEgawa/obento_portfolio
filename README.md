@@ -38,3 +38,7 @@ https://obento-portfolio.herokuapp.com/
 * rubocop
 
 * RSpec
+
+* S3での画像保存
+
+* EC2
