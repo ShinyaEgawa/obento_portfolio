@@ -1,0 +1,26 @@
+<% provide(:title, "編集画面") %>
+<section>
+  <h1 class="login-title">ユーザー編集</h1>
+  <div class="row">
+      <%= form_for(@user) do |f| %>
+       <%= render 'shared/error_messages', object: f.object %>
+        <%= f.label :名前, class: "signin-section" %>
+        <%= f.text_field :name, placeholder: "名前" %>
+        <%= f.label :ニックネーム, class: "signin-section" %>
+        <%= f.text_field :nickname, placeholder: "ニックネーム" %>
+        <%= f.label :メールアドレス, class: "signin-section" %>
+        <%= f.email_field :email, placeholder: "メールアドレス" %>
+        <%= f.label :自己紹介, class: "signin-section" %>
+        <%= f.text_field :self_introduction, placeholder: "自己紹介" %>
+        <%= f.label :パスワード, class: "signin-section" %>
+        <%= f.password_field :password, placeholder: "パスワード" %>
+        <%= f.label :password_confirmation, "パスワード(再確認)", class: "signin-section" %>
+        <%= f.password_field :password_confirmation, placeholder: "パスワードの再確認" %>
+        <div class="login-btn"><%= f.submit "更新する", class: "loginbtn" %></div>
+      <% end %>
+      <div class="gravatar_edit">
+        <%= gravatar_for @user %>
+        <a href="http://gravatar.com/emails" target="_blank" id="a_invalid">更新する</a>
+    </div>
+  </div>
+</section>

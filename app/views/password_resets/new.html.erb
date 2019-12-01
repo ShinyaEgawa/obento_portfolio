@@ -1,0 +1,11 @@
+<%= provide(:title, "パスワード再設定フォーム") %>
+<section>
+  <h1 class="login-title">パスワード再設定フォーム</h1>
+  <div class="row">
+    <%= form_for(:password_reset, url:password_resets_path) do |f| %>
+      <%= f.label :メールアドレス, class: "login-section" %>
+      <%= f.email_field :email, placeholder: "メールアドレス", class: "login-field" %>
+      <%= f.submit "送信する", class: "btn" %>
+    <% end %>
+  </div>
+</section>

@@ -12,6 +12,8 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+/vendor
+*.DS_Store
 
 # Ignore uploaded files in development
 /storage/*
@@ -25,3 +27,21 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# アップロードされたテスト画像を無視する
+/public/uploads
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+*.DS_Store
+.AppleDouble
+.LSOverride

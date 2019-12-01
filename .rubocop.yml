@@ -1,0 +1,129 @@
+AllCops:
+  Exclude:
+    - 'db/**/*'
+    - 'bin/*'
+    - 'config.ru'
+    - 'Rakefile'
+    - 'config/environments/*'
+    - 'config/application.rb'
+    - 'config/initializers/*'
+    - 'config/spring.rb'
+    - 'lib/tasks/*'
+    - 'vendor/**/*'
+    - 'path/ruby'
+    - 'Gemfile'
+    - 'spec/spec_helper.rb'
+
+Rails:
+ Enabled: false
+
+# "Use only ascii symbols in comments"を無効.
+AsciiComments:
+ Enabled: false
+
+########################
+# style群
+########################
+# "Missing top-level class documentation comment."を無効
+Style/Documentation:
+  Enabled: false
+
+# "Missing magic comment # frozen_string_literal: true."を無効
+# '# frozen_string_literal: true' のマジックコメント対策として使用
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+# "Prefer single-quoted strings when you don't need string interpolation or special symbols."を無効
+Style/StringLiterals:
+  Enabled: false
+
+# "Avoid multi-line ternary operators, use if or unless instead."を無効
+Style/MultilineTernaryOperator:
+  Enabled: false
+
+# "Use the lambda method for multiline lambdas."を無効
+# 複数行ブロックは[lambda]を使えと言われているが、[->]の方がわかりやすいと感じた。
+Style/Lambda:
+  EnforcedStyle: literal
+
+# "Use safe navigation (&.) instead of checking if an object exists before calling the method."を無効
+Style/SafeNavigation:
+  Enabled: false
+
+# "Put empty method definitions on a single line."を無効
+Style/EmptyMethod:
+  Enabled: false
+
+# 条件式の方を意識させたい場合には後置の if/unless を使わない方が分かりやすいと感じた為
+Style/IfUnlessModifier:
+  Enabled: false
+
+########################
+# layout群
+########################
+# "Extra empty line detected at block body beginning."を無効
+Layout/EmptyLinesAroundBlockBody:
+  Enabled: false
+
+# "Indent access modifiers like private."を無効
+# 今回は[def]と[private def]が同じインデントにあることがtrueと考えるため、無効化
+Layout/AccessModifierIndentation:
+  Enabled: false
+
+########################
+# metrics群
+########################
+# "Line is too long"を無効
+Metrics/LineLength:
+  Enabled: false
+
+# "Block has too many lines."を無効
+# spec等の定義部では日本語を使用することが多く文字数が伸びてしまう為
+Metrics/BlockLength:
+  Enabled: false
+
+
+# 30 まではギリギリ許せる範囲だったけど
+# リリースごとに 3 ずつぐらい下げていきます。20 まで下げたい。
+Metrics/AbcSize:
+  Max: 26
+
+# 6 は強すぎるので緩める
+Metrics/CyclomaticComplexity:
+  Max: 10
+
+# * 警告 120文字
+# * 禁止 160文字
+# のイメージ
+Metrics/LineLength:
+  Max: 160
+  Exclude:
+    - "db/migrate/*.rb"
+
+# 20 行超えるのは migration ファイル以外滅多に無い
+Metrics/MethodLength:
+  Max: 20
+  Exclude:
+    - "db/migrate/*.rb"
+
+# 分岐の数。ガード句を多用しているとデフォルト 7 だと厳しい
+Metrics/PerceivedComplexity:
+  Max: 8
+
+########################
+# その他群
+########################
+# "Avoid using update_attribute because it skips validations."を無効
+# モデルに対するupdateを行う際、バリデーションをスキップさせたい為
+Rails/SkipsModelValidations:
+  Enabled: false
+
+# "Use a guard clause instead of wrapping the code inside a conditional expression."を無効
+# ガード節の使用数を 1 -> 4 へ変更
+GuardClause:
+  MinBodyLength: 4
+
+# "Naming/AccessorMethodName: Do not prefix reader method names with get_."を無効
+# getは使用してはいけないのか・・・
+Naming/AccessorMethodName:
+  Enabled: false

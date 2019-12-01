@@ -1,15 +1,18 @@
+/* 常用css */
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+*/
+@import "default.css";
+@import "header.css";
+@import "footer.css";
+@import "link.css";
+@import "branding.css";
+@import "nav.css";
+@import "article.css";
+
+/* 各ページごとのcss */
+@import "top_pages.css";
+@import "users.css";
+@import "service.css";
+@import "sessions.css";

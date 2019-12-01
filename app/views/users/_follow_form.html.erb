@@ -1,0 +1,11 @@
+<% unless current_user?(@user) %>
+  <section>
+    <div id="follow_form" style="padding-left:15%;">
+      <% if current_user.following?(@user) %>
+        <%= render 'unfollow' %>
+      <% else %>
+        <%= render 'follow' %>
+      <% end %>
+    </div>
+  </section>
+<% end %>

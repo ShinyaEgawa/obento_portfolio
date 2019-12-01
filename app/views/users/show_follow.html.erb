@@ -1,0 +1,18 @@
+<% provide(:title, @title) %>
+<section>
+  <article>
+    <%= gravatar_for @user %>
+    <h1><%= @user.name %></h1>
+    <h2 style="padding:10px;"><%= link_to "ユーザーページへ戻る", @user %></h2>
+    <p style="padding:10px 5px;"><%= render 'shared/stats' %></p>
+    <h1><%= @title %></h1>
+    <% if @users.any? %>
+      <section>
+        <ol>
+          <%= render @users %>
+        </ol>
+      </section>
+      <%= will_paginate %>
+    <% end %>
+  </article>
+</section>
