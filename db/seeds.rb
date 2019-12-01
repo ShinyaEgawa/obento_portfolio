@@ -23,9 +23,9 @@ User.create!(name:  "Example User",
 end
 
 # Posts
-users = User.order(:created_at).take(6)
+users = User.order(:created_at).take(3)
 3.times do
-  content = Faker::Lorem.sentence(5)
+  content = Faker::Lorem.sentence(3)
   users.each { |user| user.microposts.create!(content: content) }
 end
 
