@@ -1,6 +1,7 @@
 # みんおべ！ - 作ったお弁当を共有するサイト -
 
 オリジナルのポートフォリオになります。
+https://obento-portfolio.herokuapp.com/
 
 # 導入
 
