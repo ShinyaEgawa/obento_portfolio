@@ -1,0 +1,27 @@
+<header id="header">
+  <div id="main-title">
+    <p class="header-title"><%= link_to "みんおべ！", root_path, id: "a_invalid" %></p>
+    <div class="header-subtitle">
+      <p>作ったお弁当を共有するサイト</p>
+    </div>
+  </div>
+    <nav class="header-list">
+      <% if logged_in? %>
+        <ul>
+          <li><%= link_to "ホーム", root_path %></li>
+          <li><%= link_to "マイページ", current_user %></li>
+          <li><%= link_to "ユーザー", users_path %></li>
+          <li><a href="#post">投稿</a></li>
+          <li><%= link_to "ログアウト", logout_path, method: :delete %></li>
+        </ul>
+      <% else %>
+        <ul>
+          <li><%= link_to "ホーム", root_path %></li>
+          <li><%= link_to "利用規約", service_path %></li>
+          <li><%= link_to "みんおべとは", about_path %></li>
+          <li><%= link_to "ログイン", login_path %></li>
+          <li><%= link_to "新規登録", signup_path %></li>
+        </ul>
+      <% end %>
+    </nav>
+</header>

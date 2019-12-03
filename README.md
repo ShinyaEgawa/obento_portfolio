@@ -1,24 +1,44 @@
-# README
+# みんおべ！ - 作ったお弁当を共有するサイト -
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+オリジナルのポートフォリオになります。
+https://obento-portfolio.herokuapp.com/
 
-Things you may want to cover:
+# 導入
 
-* Ruby version
+「みんおべとは」に詳細な実装箇所は記入させていただきましたが、こちらにも書かせていただきます。
 
-* System dependencies
+* Docker
 
-* Configuration
+* Docker-compose
 
-* Database creation
+# 実装した機能
 
-* Database initialization
+* ユーザーの新規登録
 
-* How to run the test suite
+* メールでのアカウント有効化
 
-* Services (job queues, cache servers, search engines, etc.)
+* ユーザーのログイン・ログアウト
 
-* Deployment instructions
+* ユーザーの更新・編集
 
-* ...
+* パスワードを忘れた際の再設定
+
+* 投稿
+
+* ユーザーフォロー
+
+* いいね！
+
+* ユーザーと投稿の検索
+
+* ゲストユーザー
+
+* コメント
+
+* rubocop
+
+* RSpec
+
+* S3での画像保存
+
+* EC2

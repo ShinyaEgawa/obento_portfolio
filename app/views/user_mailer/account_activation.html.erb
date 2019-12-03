@@ -1,0 +1,20 @@
+<h1>みんおべ！ - みんなのお弁当どっとこむ - </h1>
+
+<p>ようこそ <%= @user.name %> さん</p>
+
+<p>
+  下のURLをクリックしてユーザー登録を完了してください！
+</p>
+
+<%= link_to "Activate", edit_account_activation_url(@user.activation_token,
+                                                    email: @user.email) %>
+
+<p>
+  なお、このメールを知らない場合は削除して頂きますよう、よろしくお願いします。
+
+  /////////////////////////////////
+  みんおべ！サポートセンター
+
+  Email minobe@example.com
+  /////////////////////////////////
+</p>

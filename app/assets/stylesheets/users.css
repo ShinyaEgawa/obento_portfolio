@@ -1,0 +1,90 @@
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
+}
+
+/*
+flashが動作していないため色をつけたが、
+successの際の他にも、errorの場合でも色がlightgreenになってしまうため
+原因がわかるまでグレーアウト
+
+#flash{
+  background-color: lightgreen;
+  padding: 24px;
+  font-size: 14px;
+}
+*/
+/* 新規登録用CSS /users/new */
+.signin-title{
+  font-size: 30px;
+}
+
+.signin-section{
+  font-size: 20px;
+}
+/* ログイン用CSS /sessions/new */
+.login-title{
+  font-size: 30px;
+}
+
+.login-section{
+  font-size: 20px;
+}
+/* 共用 */
+input[type="text"]{
+  width: 98%;
+  height: 45px;
+}
+
+input[type="email"]{
+  width: 98%;
+  height: 45px;
+}
+
+input[type="password"]{
+  width: 98%;
+  height: 45px;
+}
+
+input[type="submit"]{
+  width: 80%;
+  height: 40px;
+  background-color: #13938C;
+  color: white;
+}
+
+.login-btn{
+  padding-top: 20px;
+  padding-left: 70px;
+}
+
+.signin-btn{
+  padding-top: 20px;
+  padding-left: 100px;
+}
+
+input[type="submit"]:hover{
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.new-registration{
+
+}

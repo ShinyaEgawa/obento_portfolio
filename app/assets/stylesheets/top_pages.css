@@ -1,0 +1,63 @@
+.baner{
+  margin: 10px;
+}
+
+.before-toppage{
+  position: relative;
+}
+
+.before-toppage h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-weight: bold;
+  font-size: 2em;
+  border-bottom: 3px #13938B solid;
+  border-top: 3px #13938B solid;
+}
+
+.before-toppage img{
+  width: 100%;
+  opacity: 0.3;
+}
+
+.before-toppage a{
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  -ms-transform: translate(-70%,-50%);
+  -webkit-transform: translate(-70%,-50%);
+  transform: translate(-70%,-50%);
+  font-size: 20px;
+}
+
+.signup-link{
+  border-bottom: 2px #13938B solid;
+  border-top: 2px #13938B solid;
+  padding: 5px 20px;
+}
+
+.signup-link:hover{
+  background-color: #13938B;
+}
+
+.new-photos{
+  float: left;
+}
+
+.new-title{
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+.new-posts-baner{
+  font-size: 25px;
+  border: 1px #13938B solid;
+  padding: 10px;
+}
